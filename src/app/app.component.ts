@@ -20,4 +20,8 @@ export class AppComponent {
   alterarNome(event: any) {
     this.nome = event.target.value;
   }
+
+  exibirNome(nome: string) {
+    console.log(nome);
+  }
 }
