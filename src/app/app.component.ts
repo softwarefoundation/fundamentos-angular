@@ -10,7 +10,14 @@ export class AppComponent {
 
 
   adicionar() {
-    console.log('Adicionando: " ${this.nome');
+    console.log('Adicionando:' + this.nome);
+    console.log(`Nome:  ${this.nome}`);
+
+    const numero = Math.round(Math.random() * 100);
+    this.nome = 'joão' + numero;
   }
 
+  alterarNome(event: any) {
+    this.nome = event.target.value;
+  }
 }
