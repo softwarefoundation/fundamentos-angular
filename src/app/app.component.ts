@@ -11,6 +11,16 @@ export class AppComponent {
   frase: string;
   cadastrado: boolean;
   nomePessoa: string;
+  funcionarios: [];
+  nomeFuncionario: string;
+  ultimoId = 0;
+
+  novo() {
+    this.funcionarios.push({
+      id: ++this.ultimoId,
+      nome: this.nomeFuncionario
+    });
+  }
 
   cadastrar(event: any) {
     console.log(event);
