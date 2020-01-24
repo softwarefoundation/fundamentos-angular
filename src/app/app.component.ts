@@ -9,7 +9,14 @@ export class AppComponent {
   nome = 'Fundamento Angular';
   texto: string;
   frase: string;
+  cadastrado: boolean;
+  nomePessoa: string;
 
+  cadastrar(event: any) {
+    console.log(event);
+    this.cadastrado = true;
+    this.nomePessoa = event.value;
+  }
 
   adicionar() {
     console.log('Adicionando:' + this.nome);
