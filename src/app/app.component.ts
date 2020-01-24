@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   nome = 'Fundamento Angular';
+  texto: string;
+  frase: string;
 
 
   adicionar() {
@@ -23,5 +25,10 @@ export class AppComponent {
 
   exibirNome(nome: string) {
     console.log(nome);
+  }
+
+  alterarTexto(event: any) {
+    console.log(event.target.value);
+    this.texto = event.target.value;
   }
 }
